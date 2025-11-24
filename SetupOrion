@@ -23443,7 +23443,7 @@ services:
       - REDIS_URL=redis://redis:6379
 
       ## Dados do Postgres
-      - PG_DATABASE_URL=postgres://postgres:$senha_postgres_twentycrm@twentycrm${1:+_$1}_db:5432/default
+      - PG_DATABASE_URL=postgres://postgres:$senha_postgres_twentycrm@twentycrm${1:+_$1}_db:5432/postgres
 
       ## Dados da Storage/s3
       - STORAGE_TYPE=local
@@ -23488,7 +23488,7 @@ services:
       - REDIS_URL=redis://redis:6379
 
       ## Dados do Postgres
-      - PG_DATABASE_URL=postgres://postgres:$senha_postgres_twentycrm@twentycrm${1:+_$1}_db:5432/default
+      - PG_DATABASE_URL=postgres://postgres:$senha_postgres_twentycrm@twentycrm${1:+_$1}_db:5432/postgres
       - DISABLE_DB_MIGRATIONS=true
 
       ## Dados da Storage/s3
