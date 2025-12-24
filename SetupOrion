@@ -3527,7 +3527,7 @@ if [ $? -eq 0 ]; then
 else
     echo "2/9 - [ OFF ] - Upgrade"
 fi
-sudo timedatectl set-timezone America/Sao_Paulo > /dev/null 2>&1
+sudo timedatectl set-timezone Asia/Almaty > /dev/null 2>&1
 if [ $? -eq 0 ]; then
     echo "3/9 - [ OK ] - Timezone"
 else
@@ -4056,7 +4056,7 @@ services:
       postgres
       -c max_connections=500
       -c shared_buffers=512MB
-      -c timezone=America/Sao_Paulo
+      -c timezone=Asia/Almaty
 
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -4073,7 +4073,7 @@ services:
       - POSTGRES_PASSWORD=$senha_postgres
 
       ## 🌎 Timezone
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
     deploy:
       mode: replicated
@@ -4192,7 +4192,7 @@ services:
       postgres
       -c max_connections=500
       -c shared_buffers=512MB
-      -c timezone=America/Sao_Paulo
+      -c timezone=Asia/Almaty
 
     volumes:
       - postgres${1:+_$1}_data:/var/lib/postgresql/data
@@ -4209,7 +4209,7 @@ services:
       - POSTGRES_PASSWORD=$senha_postgres
 
       ## 🌎 Timezone
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
     deploy:
       mode: replicated
@@ -4332,7 +4332,7 @@ services:
       postgres
       -c max_connections=500
       -c shared_buffers=512MB
-      -c timezone=America/Sao_Paulo
+      -c timezone=Asia/Almaty
 
     volumes:
       - pgvector:/var/lib/postgresql/data
@@ -4349,7 +4349,7 @@ services:
       - POSTGRES_PASSWORD=$senha_pgvector
 
       ## 🌎 Timezone
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
     deploy:
       mode: replicated
@@ -4469,7 +4469,7 @@ services:
       postgres
       -c max_connections=500
       -c shared_buffers=512MB
-      -c timezone=America/Sao_Paulo
+      -c timezone=Asia/Almaty
 
     volumes:
       - pgvector${1:+_$1}:/var/lib/postgresql/data
@@ -4486,7 +4486,7 @@ services:
       - POSTGRES_PASSWORD=$senha_pgvector
 
       ## 🌎 Timezone
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
     deploy:
       mode: replicated
@@ -4891,7 +4891,7 @@ services:
       - MYSQL_ROOT_PASSWORD=$senha_mysql
 
     ## 🌎 TimeZone
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
     deploy:
       placement:
@@ -5031,7 +5031,7 @@ services:
       - MYSQL_ROOT_PASSWORD=$senha_mysql
 
     ## 🌎 TimeZone
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
     deploy:
       placement:
@@ -5346,7 +5346,7 @@ services:
 
     ## 🌍 Idioma/Localização padrão
       - DEFAULT_LOCALE=pt_BR
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
     ## ☁️ Google Cloud - Modifique de acordo com os seus dados
       #- GOOGLE_OAUTH_CLIENT_ID=369777777777-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com
@@ -5458,7 +5458,7 @@ services:
 
     ## 🌍 Idioma/Localização padrão
       - DEFAULT_LOCALE=pt_BR
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
     ## ☁️ Google Cloud - Modifique de acordo com os seus dados
       #- GOOGLE_OAUTH_CLIENT_ID=369777777777-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com
@@ -8313,8 +8313,8 @@ services:
       - NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 
     ## 🕒 Fuso Horário
-      - GENERIC_TIMEZONE=America/Sao_Paulo
-      - TZ=America/Sao_Paulo
+      - GENERIC_TIMEZONE=Asia/Almaty
+      - TZ=Asia/Almaty
       #- N8N_DEFAULT_LOCALE=pt-BR
 
     deploy:
@@ -8411,8 +8411,8 @@ services:
       - NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 
       ## 🕒 Fuso Horário
-      - GENERIC_TIMEZONE=America/Sao_Paulo
-      - TZ=America/Sao_Paulo
+      - GENERIC_TIMEZONE=Asia/Almaty
+      - TZ=Asia/Almaty
       #- N8N_DEFAULT_LOCALE=pt-BR
       
     deploy:
@@ -8509,8 +8509,8 @@ services:
       - NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 
       ## 🕒 Fuso Horário
-      - GENERIC_TIMEZONE=America/Sao_Paulo
-      - TZ=America/Sao_Paulo
+      - GENERIC_TIMEZONE=Asia/Almaty
+      - TZ=Asia/Almaty
       #- N8N_DEFAULT_LOCALE=pt-BR
       
     deploy:
@@ -14486,7 +14486,7 @@ services:
 
       ## Idioma/Localização padrão
       - DEFAULT_LOCALE=pt_BR
-      - TZ=America/Brasil
+      - TZ=Asia/Almaty
 
       ## Google Cloud - Modifique de acordo com os seus dados (lembre-se de mudar no chatwoot_sidekiq)
       #- GOOGLE_OAUTH_CLIENT_ID=369777777777-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com
@@ -14593,7 +14593,7 @@ services:
 
       ## Idioma/Localização padrão
       - DEFAULT_LOCALE=pt_BR
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
       ## Google Cloud - Modifique de acordo com os seus dados (lembre-se de mudar no chatwoot_sidekiq)
       #- GOOGLE_OAUTH_CLIENT_ID=369777777777-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com
@@ -15463,8 +15463,8 @@ services:
       - EXECUTIONS_DATA_MAX_AGE=336
 
       ## Timezone
-      - GENERIC_TIMEZONE=America/Sao_Paulo
-      - TZ=America/Sao_Paulo
+      - GENERIC_TIMEZONE=Asia/Almaty
+      - TZ=Asia/Almaty
 
     deploy:
       mode: replicated
@@ -15577,8 +15577,8 @@ services:
       - EXECUTIONS_DATA_MAX_AGE=336
 
       ## Timezone
-      - GENERIC_TIMEZONE=America/Sao_Paulo
-      - TZ=America/Sao_Paulo
+      - GENERIC_TIMEZONE=Asia/Almaty
+      - TZ=Asia/Almaty
       
     deploy:
       mode: replicated
@@ -15691,8 +15691,8 @@ services:
       - EXECUTIONS_DATA_MAX_AGE=336
 
       ## Timezone
-      - GENERIC_TIMEZONE=America/Sao_Paulo
-      - TZ=America/Sao_Paulo
+      - GENERIC_TIMEZONE=Asia/Almaty
+      - TZ=Asia/Almaty
     
     deploy:
       mode: replicated
@@ -15940,7 +15940,7 @@ services:
       - APP_TITLE=OrionDesign ## Mude aqui o nome que vai aparecer no celular.
 
       ## TimeZone
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
       ## Banco de dados
       - DBDRIVER=postgres
@@ -19497,7 +19497,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=$senha_mysql
       - MYSQL_DATABASE=strapi
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
     deploy:
       placement:
@@ -24600,7 +24600,7 @@ services:
       - $nome_rede_interna ## Nome da rede interna
 
     environment:
-      - TIMEZONE=America/Sao_Paulo
+      - TIMEZONE=Asia/Almaty
 
     deploy:
       mode: replicated
@@ -28068,7 +28068,7 @@ services:
     - DB_DRIVER=postgres
 
     ## Timezone
-    - TZ=America/Sao_Paulo
+    - TZ=Asia/Almaty
 
     ## Formato do webhook
     - WEBHOOK_FORMAT=json
@@ -28360,7 +28360,7 @@ services:
       - APP_NAME=Krayin CRM - Orion
       - APP_LOCALE=pt_BR
       - APP_CURRENCY=BRL
-      - APP_TIMEZONE=America/Sao_Paulo
+      - APP_TIMEZONE=Asia/Almaty
       - LOG_CHANNEL=stack
       - LOG_LEVEL=debug
       - APP_DEBUG=false
@@ -28439,7 +28439,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=$senha_postgres_krayin
       - MYSQL_DATABASE=krayincrm${1:+_$1}
-      - TZ=America/Sao_Paulo
+      - TZ=Asia/Almaty
 
     deploy:
       mode: replicated
@@ -32360,7 +32360,7 @@ services:
       - REDIS_URL=redis://redis:6379
 
       ## Timezone
-      - TIMEZONE=America/Sao_Paulo
+      - TIMEZONE=Asia/Almaty
       
     deploy:
       mode: replicated
@@ -32414,7 +32414,7 @@ services:
       - REDIS_URL=redis://redis:6379
 
       ## Timezone
-      - TIMEZONE=America/Sao_Paulo
+      - TIMEZONE=Asia/Almaty
     
     deploy:
       mode: replicated
@@ -33724,8 +33724,8 @@ services:
       - NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 
       ## 🕒 Fuso Horário
-      - GENERIC_TIMEZONE=America/Sao_Paulo
-      - TZ=America/Sao_Paulo
+      - GENERIC_TIMEZONE=Asia/Almaty
+      - TZ=Asia/Almaty
       
     deploy:
       mode: replicated
